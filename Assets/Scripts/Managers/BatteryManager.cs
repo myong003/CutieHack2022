@@ -41,9 +41,10 @@ public class BatteryManager : MonoBehaviour
         Vector3 sunPos = sun.transform.position;
 
         foreach (GameObject panel in solarPanels) {
-            // if (panel.GetComponent<MovePanel>().isStunned) {
-            //     continue;
-            // }
+            if (panel.GetComponent<MovePanel>().isBlocked) {
+                Debug.Log("Panel " + panel.name + "is blocked");
+                continue;
+            }
 
             Vector3 panelPos = panel.transform.position;
             float panelRotation = (panel.transform.rotation.eulerAngles.z +180f) % 360f - 180f;

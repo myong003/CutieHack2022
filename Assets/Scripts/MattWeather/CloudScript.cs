@@ -18,4 +18,20 @@ public class CloudScript : MonoBehaviour
     {
         gameObject.transform.position += new Vector3(direction * moveSpeed * Time.deltaTime, 0, 0);    
     }
+
+    public void OnTriggerEnter2D(Collider2D collider)
+    {
+        MovePanel panel;
+        if (collider.gameObject.TryGetComponent<MovePanel>(out panel)) {
+            panel.isBlocked = true;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collider)
+    {
+        MovePanel panel;
+        if (collider.gameObject.TryGetComponent<MovePanel>(out panel)) {
+            panel.isBlocked = false;
+        }
+    }
 }

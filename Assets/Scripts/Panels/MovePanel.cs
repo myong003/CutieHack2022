@@ -9,6 +9,7 @@ public class MovePanel : MonoBehaviour
     [HideInInspector]
     public bool isTransitioning = false;
     public bool isDisable = false; 
+    public bool isBlocked = false;
     bool moveUp = false;
     bool moveDown = false;
     public float maxspeed = 0.02f;

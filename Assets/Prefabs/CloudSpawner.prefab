@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloud: {fileID: 1690196806113515496, guid: 2be27c70da81a7940af3aaac8607e314, type: 3}
+  thunderCloud: {fileID: 3143478766650779073, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
   spawnDelay: 5
-  heightVariance: 0.5
   direction: 1
