@@ -5,13 +5,15 @@ using UnityEngine;
 public class SunScript : MonoBehaviour
 {
     public Transform rotationPoint;
+    public float totalDegrees;
 
     private float rotationAngle;
 
     // Start is called before the first frame update
     void Start()
     {
-        rotationAngle = 100 / (GameManager.Instance.endTime * 60);
+        // Brent equation
+        rotationAngle = totalDegrees / (GameManager.Instance.endTime * 60);
     }
 
     // Update is called once per frame

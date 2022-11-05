@@ -6,6 +6,7 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject cloud;
     public float spawnDelay;
+    public float heightVariance;
     public int direction;
 
 
@@ -29,7 +30,10 @@ public class CloudSpawner : MonoBehaviour
 
     public void SpawnCloud() {
         Vector3 currPos = this.transform.position;
-        CloudScript tempCloud = Instantiate(cloud, currPos + new Vector3(0, Random.Range(-1, 1)), Quaternion.identity).GetComponent<CloudScript>();
+        float randY = Random.Range(-heightVariance, heightVariance);
+        Vector3 posVariance = new Vector3(0, randY, 0);
+
+        CloudScript tempCloud = Instantiate(cloud, currPos + posVariance, Quaternion.identity).GetComponent<CloudScript>();
         tempCloud.direction = this.direction;
 
         Destroy(tempCloud.gameObject, 10f);
