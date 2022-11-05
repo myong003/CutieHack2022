@@ -14,6 +14,9 @@ public class PanelSelector : MonoBehaviour
         panel2.GetComponent<MovePanel>().isControllable = true;
         panel1.GetComponent<MovePanel>().isControllable = false;
         panel3.GetComponent<MovePanel>().isControllable = false;
+        panel1.GetComponent<RotatePanel>().enabled = true;
+        panel2.GetComponent<RotatePanel>().enabled = false;
+        panel3.GetComponent<RotatePanel>().enabled = false;
     }
 
     // Update is called once per frame
