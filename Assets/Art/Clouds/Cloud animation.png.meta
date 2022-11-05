@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 828b7af02eb816642a327aa44491e041
+guid: 3aaab4e2771985741a6547f237e24c2b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,11 +103,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ThunderCloud animation_0
+      name: Cloud animation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89aff0a2eb97ed548a1ba6e4c37e6fe4
-      internalID: 165103506
+      spriteID: 9e87cb8c16d8ddd40b16c3ca2d6f12ab
+      internalID: 15941334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ThunderCloud animation_1
+      name: Cloud animation_1
       rect:
         serializedVersion: 2
         x: 128
@@ -142,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 309c37fd226e8454486ca8521f0b4143
-      internalID: 1182522480
+      spriteID: c60e147a0bbff9e4ea2dc86038727935
+      internalID: 1602399945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ThunderCloud animation_2
+      name: Cloud animation_2
       rect:
         serializedVersion: 2
         x: 256
@@ -163,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00ba5e48752462459d7a6e029965f71
-      internalID: -789133537
+      spriteID: b7d9cda1d3aacab4792ced19232fbb41
+      internalID: -460888549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ThunderCloud animation_3
+      name: Cloud animation_3
       rect:
         serializedVersion: 2
         x: 384
@@ -184,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d594970f5bb0cd41b14f8cc870a0ec5
-      internalID: 106626495
+      spriteID: 984dde4d571adab44a81559f3401c600
+      internalID: -64698601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ThunderCloud animation_4
+      name: Cloud animation_4
       rect:
         serializedVersion: 2
         x: 512
@@ -205,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 204d83bf7a8945a4a9cbeabd14334eab
-      internalID: 837454950
+      spriteID: 811bcf68aaefbc24fa8de0a6977f75ba
+      internalID: 512456952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ThunderCloud animation_5
+      name: Cloud animation_5
       rect:
         serializedVersion: 2
         x: 640
@@ -226,71 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29c96aea0ad30d94eac443b5e38389c2
-      internalID: -1697766974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ThunderCloud animation_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69660aa8891fe5a44a670b746a262840
-      internalID: 1373083204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ThunderCloud animation_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c065fcdfdb59dd4e9722c24c46afc1d
-      internalID: -1775949952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ThunderCloud animation_8
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf4e79da5afaa84092bcc89f50a8733
-      internalID: 246536748
+      spriteID: d008c4f2580b5834da7d89df33fed8b4
+      internalID: -768548754
       vertices: []
       indices: 
       edges: []
@@ -306,15 +267,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ThunderCloud animation_3: 106626495
-      ThunderCloud animation_4: 837454950
-      ThunderCloud animation_8: 246536748
-      ThunderCloud animation_1: 1182522480
-      ThunderCloud animation_2: -789133537
-      ThunderCloud animation_0: 165103506
-      ThunderCloud animation_5: -1697766974
-      ThunderCloud animation_7: -1775949952
-      ThunderCloud animation_6: 1373083204
+      Cloud animation_2: -460888549
+      Cloud animation_0: 15941334
+      Cloud animation_1: 1602399945
+      Cloud animation_3: -64698601
+      Cloud animation_4: 512456952
+      Cloud animation_5: -768548754
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
