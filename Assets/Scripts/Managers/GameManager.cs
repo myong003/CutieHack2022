@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set; }
+    public BatteryManager batteryManager;
     public float endTime;
 
     private float currTime;
@@ -23,6 +24,18 @@ public class GameManager : MonoBehaviour
     {
         currTime = 0;
         Application.targetFrameRate = 60;
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+        batteryManager.IncreaseBattery(10);
+
+
     }
 
     // Update is called once per frame
