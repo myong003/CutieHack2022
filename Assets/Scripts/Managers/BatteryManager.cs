@@ -22,8 +22,12 @@ public class BatteryManager : MonoBehaviour
     {
         batteryPercent = 0;
         currLevel = 0;
+
+        // Maximum possible battery = 150% for buffer room
+        // Since CheckPanels is called every frame, for endTime seconds, each increase must add up to max battery
+        // Divide by 3 for each solar panel
         float totalSamples = GameManager.Instance.endTime * Application.targetFrameRate;
-        batteryIncrease = 150 / totalSamples / 3;
+        batteryIncrease = 150 / totalSamples / solarPanels.Count;
     }
 
     // Update is called once per frame
@@ -34,18 +38,25 @@ public class BatteryManager : MonoBehaviour
     }
 
     public void CheckPanels() {
-        // float sunRotation = (sun.transform.rotation.eulerAngles.z + 180f - 37.5f) % 360f - 180f ;
         Vector3 sunPos = sun.transform.position;
 
         foreach (GameObject panel in solarPanels) {
+            // if (panel.GetComponent<MovePanel>().isStunned) {
+            //     continue;
+            // }
+
             Vector3 panelPos = panel.transform.position;
+            float panelRotation = (panel.transform.rotation.eulerAngles.z +180f) % 360f - 180f;
+
+            // Calculate angle between sun and panel
             float deltaX = sunPos.x - panelPos.x;
             float deltaY = sunPos.y - panelPos.y;
             float angle = Mathf.Atan(-deltaX / deltaY) * 180f / Mathf.PI;
 
-            float panelRotation = (panel.transform.rotation.eulerAngles.z +180f) % 360f - 180f;
+            // Check to see if angle matches the rotation of the panel
             float angleDifference = Mathf.Abs(angle - panelRotation);
             
+            // If the difference is smaller than a perfect, increase points fully
             if (angleDifference < perfectScoreRange) {
                 IncreaseBattery(batteryIncrease);
             }
@@ -56,15 +67,19 @@ public class BatteryManager : MonoBehaviour
     }
 
     public void IncreaseBattery(float batteryIncrease) {
+        // Only increment if battery isn't full, doesn't increment past 100
         if (batteryPercent < 100) {
             batteryPercent += batteryIncrease;
             int nextLevel = (int) (batteryPercent / 10);
 
+            // Check to see if batteryPerecent goes to next interval (10)
             if (nextLevel > currLevel) {
+                // Add a new battery node to the meter
                 Vector3 batteryPos = batteryStart.transform.position + new Vector3(0, batteryHeightDifference * currLevel, 0);
                 Instantiate(batteryNode, batteryPos, Quaternion.identity);
             }
 
+            // Update the current battery
             currLevel = nextLevel;
         }
     }
