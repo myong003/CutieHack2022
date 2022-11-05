@@ -23,6 +23,15 @@ public class MovePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(moveUp){
+            transform.position = Vector2.MoveTowards(transform.position, positions[0], maxspeed);
+        }
+        else if(moveDown){
+            transform.position = Vector2.MoveTowards(transform.position, positions[1], maxspeed);
+        }
+        if(Vector2.Distance(transform.position, positions[0]) <= 0.001 || Vector2.Distance(transform.position, positions[1]) <= 0.001){
+            isTransitioning = false;
+        }
         if (!isControllable) return;
 
         if(Input.GetKeyDown(KeyCode.W) && !isTransitioning){
@@ -36,15 +45,5 @@ public class MovePanel : MonoBehaviour
             moveUp = false;
             moveDown = true;
         }
-        if(moveUp){
-            transform.position = Vector2.MoveTowards(transform.position, positions[0], maxspeed);
-        }
-        else if(moveDown){
-            transform.position = Vector2.MoveTowards(transform.position, positions[1], maxspeed);
-        }
-        if(Vector2.Distance(transform.position, positions[0]) <= 0.001 || Vector2.Distance(transform.position, positions[1]) <= 0.001){
-            isTransitioning = false;
-        }
-        
     }
 }
