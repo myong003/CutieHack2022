@@ -11,7 +11,9 @@ public class PanelSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        panel2.GetComponent<MovePanel>().isControllable = true;
+        panel1.GetComponent<MovePanel>().isControllable = false;
+        panel3.GetComponent<MovePanel>().isControllable = false;
     }
 
     // Update is called once per frame
@@ -22,6 +24,9 @@ public class PanelSelector : MonoBehaviour
             panel1.GetComponent<MovePanel>().isControllable = true;
             panel2.GetComponent<MovePanel>().isControllable = false;
             panel3.GetComponent<MovePanel>().isControllable = false;
+            panel1.GetComponent<RotatePanel>().enabled = true;
+            panel2.GetComponent<RotatePanel>().enabled = false;
+            panel3.GetComponent<RotatePanel>().enabled = false;
             Debug.Log("enable solar panel 1");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha2) )
@@ -29,6 +34,9 @@ public class PanelSelector : MonoBehaviour
             panel2.GetComponent<MovePanel>().isControllable = true;
             panel1.GetComponent<MovePanel>().isControllable = false;
             panel3.GetComponent<MovePanel>().isControllable = false;
+            panel1.GetComponent<RotatePanel>().enabled = false;
+            panel2.GetComponent<RotatePanel>().enabled = true;
+            panel3.GetComponent<RotatePanel>().enabled = false;
             Debug.Log("enable solar panel 2");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha3) )
@@ -36,6 +44,9 @@ public class PanelSelector : MonoBehaviour
             panel3.GetComponent<MovePanel>().isControllable = true;
             panel1.GetComponent<MovePanel>().isControllable = false;
             panel2.GetComponent<MovePanel>().isControllable = false;
+            panel1.GetComponent<RotatePanel>().enabled = false;
+            panel2.GetComponent<RotatePanel>().enabled = false;
+            panel3.GetComponent<RotatePanel>().enabled = true;
             Debug.Log("enable solar panel 3");
         }
     }
