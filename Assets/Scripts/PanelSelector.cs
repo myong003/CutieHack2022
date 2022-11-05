@@ -19,23 +19,23 @@ public class PanelSelector : MonoBehaviour
     {
         if ( Input.GetKeyDown(KeyCode.Alpha1) )
         {
-            panel1.GetComponent<Panel>().enabled = true;
-            panel2.GetComponent<Panel>().enabled = false;
-            panel3.GetComponent<Panel>().enabled = false;
+            panel1.GetComponent<MovePanel>().isControllable = true;
+            panel2.GetComponent<MovePanel>().isControllable = false;
+            panel3.GetComponent<MovePanel>().isControllable = false;
             Debug.Log("enable solar panel 1");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha2) )
         {
-            panel2.GetComponent<Panel>().enabled = true;
-            panel1.GetComponent<Panel>().enabled = false;
-            panel3.GetComponent<Panel>().enabled = false;
+            panel2.GetComponent<MovePanel>().isControllable = true;
+            panel1.GetComponent<MovePanel>().isControllable = false;
+            panel3.GetComponent<MovePanel>().isControllable = false;
             Debug.Log("enable solar panel 2");
         }
         if ( Input.GetKeyDown(KeyCode.Alpha3) )
         {
-            panel3.GetComponent<Panel>().enabled = true;
-            panel1.GetComponent<Panel>().enabled = false;
-            panel2.GetComponent<Panel>().enabled = false;
+            panel3.GetComponent<MovePanel>().isControllable = true;
+            panel1.GetComponent<MovePanel>().isControllable = false;
+            panel2.GetComponent<MovePanel>().isControllable = false;
             Debug.Log("enable solar panel 3");
         }
     }
