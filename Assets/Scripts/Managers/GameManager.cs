@@ -24,16 +24,6 @@ public class GameManager : MonoBehaviour
     {
         currTime = 0;
         Application.targetFrameRate = 60;
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
-        batteryManager.IncreaseBattery(10);
 
 
     }

@@ -800,9 +800,11 @@ MonoBehaviour:
   sun: {fileID: 259852844}
   solarPanels:
   - {fileID: 1225956092}
+  - {fileID: 226279141}
+  - {fileID: 691708907}
   batteryHeightDifference: 0.5
-  perfectScoreRange: 10
-  goodScoreRange: 20
+  perfectScoreRange: 20
+  goodScoreRange: 40
 --- !u!1 &1548982234
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548982234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.475, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -912,7 +914,7 @@ Transform:
   m_GameObject: {fileID: 1571447928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 5.5, z: 1}
+  m_LocalScale: {x: 1, y: 5.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1548982235}
@@ -1071,7 +1073,7 @@ PrefabInstance:
       objectReference: {fileID: 259852844}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: endTime
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: rotationPoint

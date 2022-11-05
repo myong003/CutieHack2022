@@ -15,17 +15,21 @@ public class BatteryManager : MonoBehaviour
 
     private int currLevel;
     private float batteryPercent;
+    private float batteryIncrease;
 
     // Start is called before the first frame update
     void Start()
     {
         batteryPercent = 0;
         currLevel = 0;
+        float totalSamples = GameManager.Instance.endTime * Application.targetFrameRate;
+        batteryIncrease = 150 / totalSamples / 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(batteryPercent);
         CheckPanels();
     }
 
@@ -43,26 +47,25 @@ public class BatteryManager : MonoBehaviour
             float angleDifference = Mathf.Abs(angle - panelRotation);
             
             if (angleDifference < perfectScoreRange) {
-                Debug.Log("Perfect");
+                IncreaseBattery(batteryIncrease);
             }
             else if (angleDifference < goodScoreRange) {
-                Debug.Log("GOod");
-            }
-            else {
-                Debug.Log("Missed");
+                IncreaseBattery(batteryIncrease / 2);
             }
         }
     }
 
     public void IncreaseBattery(float batteryIncrease) {
-        batteryPercent += batteryIncrease;
-        int nextLevel = (int) (batteryPercent / 10);
+        if (batteryPercent < 100) {
+            batteryPercent += batteryIncrease;
+            int nextLevel = (int) (batteryPercent / 10);
 
-        if (nextLevel > currLevel) {
-            Vector3 batteryPos = batteryStart.transform.position + new Vector3(0, batteryHeightDifference * currLevel, 0);
-            Instantiate(batteryNode, batteryPos, Quaternion.identity);
+            if (nextLevel > currLevel) {
+                Vector3 batteryPos = batteryStart.transform.position + new Vector3(0, batteryHeightDifference * currLevel, 0);
+                Instantiate(batteryNode, batteryPos, Quaternion.identity);
+            }
+
+            currLevel = nextLevel;
         }
-
-        currLevel = nextLevel;
     }
 }
