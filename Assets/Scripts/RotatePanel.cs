@@ -14,11 +14,11 @@ public class RotatePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A)){
-            transform.RotateAround(transform.position, Vector3.right, rotateSpeed);
+        if(Input.GetKey(KeyCode.A) && (transform.rotation.eulerAngles.z +180f) % 360f - 180f < 45){
+            transform.RotateAround(transform.position, Vector3.forward, rotateSpeed);
         }
-        else if(Input.GetKeyDown(KeyCode.D)){
-            transform.RotateAround(transform.position, Vector3.right, rotateSpeed);
+        else if(Input.GetKey(KeyCode.D) && (transform.rotation.eulerAngles.z +180f) % 360f - 180f > -45){
+            transform.RotateAround(transform.position, Vector3.forward, -rotateSpeed);
         }
     }
 }

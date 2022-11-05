@@ -123,6 +123,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &818793348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 373755717223018629, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_Name
+      value: PanelSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018630, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373755717223018631, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: panel1
+      value: 
+      objectReference: {fileID: 914194626}
+    - target: {fileID: 373755717223018631, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: panel2
+      value: 
+      objectReference: {fileID: 1149611528}
+    - target: {fileID: 373755717223018631, guid: 098a05753c134da43a7168079621cb51, type: 3}
+      propertyPath: panel3
+      value: 
+      objectReference: {fileID: 1465577768}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 098a05753c134da43a7168079621cb51, type: 3}
 --- !u!1 &914194626
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +206,7 @@ GameObject:
   - component: {fileID: 914194628}
   - component: {fileID: 914194627}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Left Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff6632023a0ec409aa98fb28131128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isControllable: 1
   maxspeed: 0.01
   topPos: 4
   botPos: -4
@@ -217,11 +289,11 @@ Transform:
   m_GameObject: {fileID: 914194626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.65, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149611528
 GameObject:
@@ -236,7 +308,7 @@ GameObject:
   - component: {fileID: 1149611529}
   - component: {fileID: 1149611532}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Middle Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff6632023a0ec409aa98fb28131128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isControllable: 1
   maxspeed: 0.01
   topPos: 4
   botPos: -4
@@ -318,11 +391,11 @@ Transform:
   m_GameObject: {fileID: 1149611528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1149611532
 MonoBehaviour:
@@ -336,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0499ac46c77af9444bd857aadefed020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 1
+  rotateSpeed: 2
 --- !u!1 &1465577768
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +422,7 @@ GameObject:
   - component: {fileID: 1465577770}
   - component: {fileID: 1465577769}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: Right Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,6 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff6632023a0ec409aa98fb28131128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isControllable: 1
   maxspeed: 0.01
   topPos: 4
   botPos: -4
@@ -431,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 1465577768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -531,7 +605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1627153851995828163, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1627153851995828163, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: m_LocalPosition.x
