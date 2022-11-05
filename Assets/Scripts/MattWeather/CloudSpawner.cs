@@ -31,9 +31,9 @@ public class CloudSpawner : MonoBehaviour
     public void SpawnCloud() {
         float thunderRandom = Random.Range(0, 5);
         Vector3 currPos = this.transform.position;
-        if ( thunderRandom == 1 || thunderRandom == 2 )
+        if ( thunderRandom == 1 )
         {
-            CloudScript tempthunderCloud = Instantiate(thunderCloud, currPos + new Vector3(0, Random.Range(-1, 1)), Quaternion.identity).GetComponent<CloudScript>();
+            ThunderScript tempthunderCloud = Instantiate(thunderCloud, currPos + new Vector3(0, Random.Range(-1, 1)), Quaternion.identity).GetComponent<ThunderScript>();
             tempthunderCloud.direction = this.direction;
             Destroy(tempthunderCloud.gameObject, 10f);
         }
