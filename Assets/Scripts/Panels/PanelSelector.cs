@@ -14,15 +14,16 @@ public class PanelSelector : MonoBehaviour
         panel2.GetComponent<MovePanel>().isControllable = true;
         panel1.GetComponent<MovePanel>().isControllable = false;
         panel3.GetComponent<MovePanel>().isControllable = false;
-        panel1.GetComponent<RotatePanel>().enabled = true;
-        panel2.GetComponent<RotatePanel>().enabled = false;
+        panel1.GetComponent<RotatePanel>().enabled = false;
+        panel2.GetComponent<RotatePanel>().enabled = true;
         panel3.GetComponent<RotatePanel>().enabled = false;
+        panel1 = GameObject.FindWithTag("Panel");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.Alpha1) )
+        if ( Input.GetKeyDown(KeyCode.Alpha1) && !panel1.GetComponent<MovePanel>().isDisable)
         {
             panel1.GetComponent<MovePanel>().isControllable = true;
             panel2.GetComponent<MovePanel>().isControllable = false;
@@ -32,7 +33,7 @@ public class PanelSelector : MonoBehaviour
             panel3.GetComponent<RotatePanel>().enabled = false;
             Debug.Log("enable solar panel 1");
         }
-        if ( Input.GetKeyDown(KeyCode.Alpha2) )
+        if ( Input.GetKeyDown(KeyCode.Alpha2) && !panel2.GetComponent<MovePanel>().isDisable)
         {
             panel2.GetComponent<MovePanel>().isControllable = true;
             panel1.GetComponent<MovePanel>().isControllable = false;
@@ -42,7 +43,7 @@ public class PanelSelector : MonoBehaviour
             panel3.GetComponent<RotatePanel>().enabled = false;
             Debug.Log("enable solar panel 2");
         }
-        if ( Input.GetKeyDown(KeyCode.Alpha3) )
+        if ( Input.GetKeyDown(KeyCode.Alpha3) && !panel3.GetComponent<MovePanel>().isDisable)
         {
             panel3.GetComponent<MovePanel>().isControllable = true;
             panel1.GetComponent<MovePanel>().isControllable = false;

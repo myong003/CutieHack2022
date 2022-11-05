@@ -333,6 +333,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a997ae5153638c7409865d08089cecde, type: 3}
+--- !u!1 &940897427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4984460583683446561, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+  m_PrefabInstance: {fileID: 705035073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1458558537
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,9 +382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6985cc61789854a70bf085d0ee736142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel1: {fileID: 4984460583683446561, guid: 0ea3c57d3a8084288ba0eb697d98a0a8, type: 3}
-  panel2: {fileID: 4984460583683446561, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
-  panel3: {fileID: 4984460583683446561, guid: 213a5231ecf884641881062aed66b489, type: 3}
+  panel1: {fileID: 1984371810}
+  panel2: {fileID: 940897427}
+  panel3: {fileID: 1677158549}
 --- !u!1001 &1561739247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,6 +444,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 213a5231ecf884641881062aed66b489, type: 3}
+--- !u!1 &1677158549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4984460583683446561, guid: 213a5231ecf884641881062aed66b489, type: 3}
+  m_PrefabInstance: {fileID: 1561739247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1984371810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4984460583683446561, guid: 0ea3c57d3a8084288ba0eb697d98a0a8, type: 3}
+  m_PrefabInstance: {fileID: 2040902234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2040902234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -509,15 +524,15 @@ PrefabInstance:
     - target: {fileID: -756120096893140287, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
       propertyPath: panel1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1984371810}
     - target: {fileID: -756120096893140287, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
       propertyPath: panel2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 940897427}
     - target: {fileID: -756120096893140287, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
       propertyPath: panel3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677158549}
     - target: {fileID: 3143478766650779073, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
       propertyPath: m_Name
       value: thunderCloud
