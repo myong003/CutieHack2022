@@ -11,7 +11,9 @@ public class PanelSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        panel2.GetComponent<MovePanel>().isControllable = true;
+        panel1.GetComponent<MovePanel>().isControllable = false;
+        panel3.GetComponent<MovePanel>().isControllable = false;
     }
 
     // Update is called once per frame
