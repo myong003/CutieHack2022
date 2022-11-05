@@ -13,9 +13,9 @@ public class ThunderScript : MonoBehaviour
 
     void start()
     {
-        //panel1 = GameObject.FindWithTag("Panel");
-        //panel2 = GameObject.FindWithTag("Panel2");
-        //panel3 = GameObject.FindWithTag("Panel3");
+        panel1 = GameObject.FindWithTag("Panel");
+        panel2 = GameObject.FindWithTag("Panel2");
+        panel3 = GameObject.FindWithTag("Panel3");
     }
     
     IEnumerator waitDestroy()
