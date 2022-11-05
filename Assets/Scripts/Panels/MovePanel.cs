@@ -8,6 +8,7 @@ public class MovePanel : MonoBehaviour
     public bool isControllable = true;
     [HideInInspector]
     public bool isTransitioning = false;
+    public bool isDisable = false; 
     bool moveUp = false;
     bool moveDown = false;
     public float maxspeed = 0.02f;
@@ -24,6 +25,10 @@ public class MovePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if ( isDisable )
+        {
+            return;
+        }
         if(moveUp){
             transform.position = Vector2.MoveTowards(transform.position, positions[0], maxspeed);
         }
