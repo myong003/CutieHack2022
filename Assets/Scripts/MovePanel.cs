@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+public class MovePanel : MonoBehaviour
 {
+    [HideInInspector]
+    public bool isControllable = true;
     bool isTransitioning = false;
     bool moveUp = false;
     bool moveDown = false;
-    public float maxspeed = 0.01f;
+    public float maxspeed = 0.02f;
 
     public float topPos = 4, botPos = -4;
     Vector2[] positions = new Vector2[2]; // [0] top, [1] bottom
@@ -21,6 +23,17 @@ public class Panel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(moveUp){
+            transform.position = Vector2.MoveTowards(transform.position, positions[0], maxspeed);
+        }
+        else if(moveDown){
+            transform.position = Vector2.MoveTowards(transform.position, positions[1], maxspeed);
+        }
+        if(Vector2.Distance(transform.position, positions[0]) <= 0.001 || Vector2.Distance(transform.position, positions[1]) <= 0.001){
+            isTransitioning = false;
+        }
+        if (!isControllable) return;
+
         if(Input.GetKeyDown(KeyCode.W) && !isTransitioning){
             isTransitioning = true;
             moveUp = true;
@@ -32,15 +45,5 @@ public class Panel : MonoBehaviour
             moveUp = false;
             moveDown = true;
         }
-        if(moveUp){
-            transform.position = Vector2.MoveTowards(transform.position, positions[0], maxspeed);
-        }
-        else if(moveDown){
-            transform.position = Vector2.MoveTowards(transform.position, positions[1], maxspeed);
-        }
-        if(Vector2.Distance(transform.position, positions[0]) <= 0.001 || Vector2.Distance(transform.position, positions[1]) <= 0.001){
-            isTransitioning = false;
-        }
-        
     }
 }
