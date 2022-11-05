@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MovePanel : MonoBehaviour
 {
-    bool isControllable = true;
+    [HideInInspector]
+    public bool isControllable = true;
     bool isTransitioning = false;
     bool moveUp = false;
     bool moveDown = false;
-    public float maxspeed = 0.01f;
+    public float maxspeed = 0.02f;
 
     public float topPos = 4, botPos = -4;
     Vector2[] positions = new Vector2[2]; // [0] top, [1] bottom
@@ -23,7 +24,7 @@ public class MovePanel : MonoBehaviour
     void Update()
     {
         if (!isControllable) return;
-        
+
         if(Input.GetKeyDown(KeyCode.W) && !isTransitioning){
             isTransitioning = true;
             moveUp = true;
