@@ -103,6 +103,7 @@ MonoBehaviour:
   isControllable: 1
   isTransitioning: 0
   isDisable: 0
+  isBlocked: 0
   maxspeed: 0.01
   topPos: 4
   botPos: -4
