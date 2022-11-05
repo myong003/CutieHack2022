@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+public class MovePanel : MonoBehaviour
 {
+    bool isControllable = true;
     bool isTransitioning = false;
     bool moveUp = false;
     bool moveDown = false;
@@ -21,6 +22,8 @@ public class Panel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isControllable) return;
+        
         if(Input.GetKeyDown(KeyCode.W) && !isTransitioning){
             isTransitioning = true;
             moveUp = true;
