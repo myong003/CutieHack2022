@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovePanel : MonoBehaviour
 {
+    bool isControllable = true;
     bool isTransitioning = false;
     bool moveUp = false;
     bool moveDown = false;
@@ -21,6 +22,8 @@ public class MovePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isControllable) return;
+        
         if(Input.GetKeyDown(KeyCode.W) && !isTransitioning){
             isTransitioning = true;
             moveUp = true;
