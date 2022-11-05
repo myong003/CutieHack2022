@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4984460583683446560}
   - component: {fileID: 4984460583683446565}
   m_Layer: 0
-  m_Name: Middle Panel
-  m_TagString: Panel2
+  m_Name: Left Panel
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff6632023a0ec409aa98fb28131128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isControllable: 1
+  isControllable: 0
   isTransitioning: 0
-  isDisable: 1
+  isDisable: 0
   maxspeed: 0.01
   topPos: 4
   botPos: -4
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4984460583683446561}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0499ac46c77af9444bd857aadefed020, type: 3}
   m_Name: 

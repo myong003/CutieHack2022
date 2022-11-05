@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5259865469832356255}
   - component: {fileID: 860836790880026578}
-  - component: {fileID: 628090846388188232}
+  - component: {fileID: -4436757305577644410}
+  - component: {fileID: 4102052521921896872}
+  - component: {fileID: -756120096893140287}
   m_Layer: 0
   m_Name: thunderCloud
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3143478766650779073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.09, y: -3.09, z: 0}
+  m_LocalPosition: {x: -8.309104, y: -0.044231176, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +87,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &628090846388188232
+--- !u!61 &-4436757305577644410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143478766650779073}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06212616, y: -0.1449629}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.22, y: 3.24}
+    newSize: {x: 3.22, y: 3.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2733574, y: 1.1276853}
+  m_EdgeRadius: 0
+--- !u!50 &4102052521921896872
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143478766650779073}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-756120096893140287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +143,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3143478766650779073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbe898339bb60f40baf85f42c1ff176, type: 3}
+  m_Script: {fileID: 11500000, guid: ab57cfd1a9e9840b89a518d90359e26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
   direction: 1
+  panel1: {fileID: 4984460583683446561, guid: 0ea3c57d3a8084288ba0eb697d98a0a8, type: 3}
+  panel2: {fileID: 4984460583683446561, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+  panel3: {fileID: 4984460583683446561, guid: 213a5231ecf884641881062aed66b489, type: 3}
