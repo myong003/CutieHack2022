@@ -374,8 +374,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd20d9946a6b34746bf3f0f854605576, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1b14f5027324cf044b4fab606d240e48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf1e63f3d8c8d8843865cef6e3d7d9b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf1e63f3d8c8d8843865cef6e3d7d9b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b14f5027324cf044b4fab606d240e48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1421,8 +1421,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd20d9946a6b34746bf3f0f854605576, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2067,12 +2067,20 @@ PrefabInstance:
       objectReference: {fileID: 127443495}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: endTime
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: fadeSpeed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 1787264516}
+    - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
+      propertyPath: loseCanvas
+      value: 
+      objectReference: {fileID: 1666491096}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: endScreenWin
       value: 
@@ -2158,7 +2166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1666491097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2261,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1787264517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2518,8 +2526,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1573240849}
   - {fileID: 597320892}
+  - {fileID: 1573240849}
   - {fileID: 136705405}
   - {fileID: 611010906}
   m_Father: {fileID: 1666491097}

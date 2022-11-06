@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set; }
     public GameObject endScreenLose;
     public GameObject endScreenWin;
+    public GameObject winCanvas;
+    public GameObject loseCanvas;
     public Image blackScreenLose;
     public Image blackScreenWin;
     public float fadeSpeed;
@@ -47,6 +49,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene("LevelSelection");
+        }
+
         currTime += Time.deltaTime;
         Sky.transform.RotateAround(Sky.transform.position, Vector3.forward, -skyRotateAngle);
         FogTileMapA += (140 / endTime) / 60;
@@ -73,6 +79,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeToBlackLose() {
         gameEnded = true;
+        loseCanvas.SetActive(true);
         while (blackScreenLose.color.a < 1f) {
             Color c = blackScreenLose.color;
             c.a += fadeSpeed;
@@ -85,6 +92,7 @@ public class GameManager : MonoBehaviour
     
     IEnumerator FadeToBlackWin() {
         gameEnded = true;
+        winCanvas.SetActive(true);
         while (blackScreenWin.color.a < 1f) {
             Color c = blackScreenWin.color;
             c.a += fadeSpeed;
