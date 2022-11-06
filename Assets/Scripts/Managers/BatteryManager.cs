@@ -28,7 +28,7 @@ public class BatteryManager : MonoBehaviour
         // Maximum possible battery = 150% for buffer room
         // Since CheckPanels is called every frame, for endTime seconds, each increase must add up to max battery
         // Divide by 3 for each solar panel
-        float totalSamples = GameManager.Instance.endTime * Application.targetFrameRate;
+        float totalSamples = GameManager.Instance.endTime * 60;
         batteryIncrease = Mathf.Abs(150 / totalSamples / solarPanels.Count);
     }
 
@@ -49,7 +49,7 @@ public class BatteryManager : MonoBehaviour
             }
 
             Vector3 panelPos = panel.transform.position;
-            float panelRotation = (panel.transform.rotation.eulerAngles.z +180f) % 360f - 180f;
+            float panelRotation = (panel.transform.GetChild(1).rotation.eulerAngles.z +180f) % 360f - 180f;
 
             // Calculate angle between sun and panel
             float deltaX = sunPos.x - panelPos.x;
