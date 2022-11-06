@@ -36,6 +36,7 @@ public class BatteryManager : MonoBehaviour
     void Update()
     {
         Debug.Log(batteryPercent);
+
         CheckPanels();
     }
 
@@ -49,7 +50,7 @@ public class BatteryManager : MonoBehaviour
             }
 
             Vector3 panelPos = panel.transform.position;
-            float panelRotation = (panel.transform.rotation.eulerAngles.z +180f) % 360f - 180f;
+            float panelRotation = (panel.transform.GetChild(1).rotation.eulerAngles.z +180f) % 360f - 180f;
 
             // Calculate angle between sun and panel
             float deltaX = sunPos.x - panelPos.x;
