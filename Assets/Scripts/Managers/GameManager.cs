@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     GameObject FogTileMap;
 
     private float currTime, skyRotateAngle, FogTileMapA;
-    private bool gameEnded = false;
+    public bool gameEnded = false;
 
     void Awake() {
         if (Instance != null && Instance != this) {
