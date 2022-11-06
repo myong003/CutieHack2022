@@ -88,6 +88,9 @@ public class BatteryManager : MonoBehaviour
             // Update the current battery
             currLevel = nextLevel;
         }
+        else {
+            GameManager.Instance.EndLevel();
+        }
 
         batteryPercentText.text = (int) batteryPercent + "%";
     }
