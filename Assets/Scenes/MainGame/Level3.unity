@@ -714,6 +714,7 @@ MonoBehaviour:
   batteryStart: {fileID: 1548982235}
   batteryNode: {fileID: 4048208509154066518, guid: 0474642f5e98e7045a42ffc402606ae2, type: 3}
   sun: {fileID: 259852844}
+  batteryPercentText: {fileID: 0}
   solarPanels:
   - {fileID: 1150497733}
   - {fileID: 226279141}
@@ -721,6 +722,7 @@ MonoBehaviour:
   batteryHeightDifference: 0.5
   perfectScoreRange: 20
   goodScoreRange: 40
+  batteryPercent: 0
 --- !u!1 &1548982234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,13 +1066,17 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1365691000, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
+      propertyPath: batteryPercent
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: sun
       value: 
       objectReference: {fileID: 259852844}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: endTime
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: rotationPoint

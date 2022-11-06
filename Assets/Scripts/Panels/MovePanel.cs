@@ -13,7 +13,8 @@ public class MovePanel : MonoBehaviour
     bool moveUp = false;
     bool moveDown = false;
     public float maxspeed = 0.02f;
-
+    public AudioSource randomSound;
+    public AudioClip[] moveSound;
     public float topPos = 4, botPos = -4;
     Vector2[] positions = new Vector2[2]; // [0] top, [1] bottom
     // Start is called before the first frame update
@@ -45,12 +46,15 @@ public class MovePanel : MonoBehaviour
             isTransitioning = true;
             moveUp = true;
             moveDown = false;
-            
+            randomSound.clip = moveSound[Random.Range(0, moveSound.Length)];
+            randomSound.Play();
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isTransitioning){
             isTransitioning = true;
             moveUp = false;
             moveDown = true;
+            randomSound.clip = moveSound[Random.Range(0, moveSound.Length)];
+            randomSound.Play();
         }
     }
 }
