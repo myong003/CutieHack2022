@@ -74,7 +74,7 @@ public class BatteryManager : MonoBehaviour
 
     public void IncreaseBattery(float batteryIncrease) {
         // Only increment if battery isn't full, doesn't increment past 100
-        if (batteryPercent < 100) {
+        if (batteryPercent < 100 && !GameManager.Instance.gameEnded) {
             batteryPercent += batteryIncrease;
             int nextLevel = (int) (batteryPercent / 10);
 
@@ -88,7 +88,7 @@ public class BatteryManager : MonoBehaviour
             // Update the current battery
             currLevel = nextLevel;
         }
-        else {
+        else if (!GameManager.Instance.gameEnded) {
             GameManager.Instance.EndLevel();
         }
 

@@ -113,8 +113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558b101ae0c780e47bef39ebf1ed1d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endScreenLose: {fileID: 0}
+  endScreenWin: {fileID: 0}
+  blackScreenLose: {fileID: 0}
+  blackScreenWin: {fileID: 0}
+  fadeSpeed: 0.05
   batteryManager: {fileID: 1365691000}
   endTime: 60
+  gameEnded: 0
 --- !u!114 &1365691000
 MonoBehaviour:
   m_ObjectHideFlags: 0
