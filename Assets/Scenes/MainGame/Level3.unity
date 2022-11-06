@@ -195,9 +195,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4561026819500952854, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 181091668}
+    - target: {fileID: 4561026819500952854, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4561026820182561016, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 181091668}
+    - target: {fileID: 4561026820182561016, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+--- !u!1 &181091666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4561026819744358884, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+  m_PrefabInstance: {fileID: 181091665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &181091667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4561026819469069972, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+  m_PrefabInstance: {fileID: 181091665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &181091668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4561026819126118085, guid: 6fe0c6fb53050b142b3293aa91591399, type: 3}
+  m_PrefabInstance: {fileID: 181091665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0ecd0f19aef4570a417a5f30bee162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &300087004 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6434759946224852658, guid: 4a74617830ee8154cb7dd99c480a7d84, type: 3}
@@ -460,6 +497,14 @@ PrefabInstance:
       propertyPath: endTime
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 181091667}
+    - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
+      propertyPath: loseCanvas
+      value: 
+      objectReference: {fileID: 181091666}
     - target: {fileID: 1627153851995828162, guid: 1e5874f2188ae5a4083d5f2bcda27e2e, type: 3}
       propertyPath: endScreenWin
       value: 
