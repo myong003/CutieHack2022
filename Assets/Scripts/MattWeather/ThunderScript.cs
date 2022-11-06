@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ThunderScript : MonoBehaviour
 {
+
+    public Animator animator;
     public float moveSpeed;
     public int direction;       // 1 for moving right, -1 for moving left
 
@@ -41,6 +43,7 @@ public class ThunderScript : MonoBehaviour
 
     IEnumerator StunPanel(MovePanel panel) {
         panel.isDisable = true;
+        animator.Play("thunderCloudAnim");
         yield return new WaitForSeconds(3);
         panel.isDisable = false;
     }

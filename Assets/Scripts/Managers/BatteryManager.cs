@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BatteryManager : MonoBehaviour
 {
     public Transform batteryStart;
     public GameObject batteryNode;
     public GameObject sun;
+    public TextMeshProUGUI batteryPercentText;
     public List<GameObject> solarPanels;
     public float batteryHeightDifference;
     public float perfectScoreRange;
@@ -83,5 +85,7 @@ public class BatteryManager : MonoBehaviour
             // Update the current battery
             currLevel = nextLevel;
         }
+
+        batteryPercentText.text = (int) batteryPercent + "%";
     }
 }

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5259865469832356255}
   - component: {fileID: 860836790880026578}
-  - component: {fileID: -4436757305577644410}
+  - component: {fileID: 8019009644924701947}
   - component: {fileID: 4102052521921896872}
   - component: {fileID: -756120096893140287}
+  - component: {fileID: 2456925735808069999}
   m_Layer: 0
   m_Name: thunderCloud
   m_TagString: Untagged
@@ -29,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 3143478766650779073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.309104, y: -0.044231176, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &860836790880026578
 SpriteRenderer:
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da44b559a04ce45adb03a007854ca145, type: 3}
+  m_Sprite: {fileID: 165103506, guid: 828b7af02eb816642a327aa44491e041, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-4436757305577644410
-BoxCollider2D:
+--- !u!58 &8019009644924701947
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -100,19 +101,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06212616, y: -0.1449629}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.22, y: 3.24}
-    newSize: {x: 3.22, y: 3.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.03, y: -0.016252995}
   serializedVersion: 2
-  m_Size: {x: 1.2733574, y: 1.1276853}
-  m_EdgeRadius: 0
+  m_Radius: 0.32121706
 --- !u!50 &4102052521921896872
 Rigidbody2D:
   serializedVersion: 4
@@ -146,8 +137,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab57cfd1a9e9840b89a518d90359e26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2456925735808069999}
   moveSpeed: 3
   direction: 1
-  panel1: {fileID: 4984460583683446561, guid: 0ea3c57d3a8084288ba0eb697d98a0a8, type: 3}
-  panel2: {fileID: 4984460583683446561, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
-  panel3: {fileID: 4984460583683446561, guid: 213a5231ecf884641881062aed66b489, type: 3}
+--- !u!95 &2456925735808069999
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3143478766650779073}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a789ae35b29442446a851886d5841828, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

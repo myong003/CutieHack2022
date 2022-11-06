@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627153851995828163}
   - component: {fileID: 1627153851995828162}
+  - component: {fileID: 1365691000}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1627153851995828162
 MonoBehaviour:
@@ -44,5 +45,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558b101ae0c780e47bef39ebf1ed1d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 0
+  batteryManager: {fileID: 1365691000}
   endTime: 60
+--- !u!114 &1365691000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627153851995828165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e8004395d4c9047b8270c776b1cfe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryStart: {fileID: 0}
+  batteryNode: {fileID: 4048208509154066518, guid: 0474642f5e98e7045a42ffc402606ae2, type: 3}
+  sun: {fileID: 0}
+  batteryPercentText: {fileID: 0}
+  solarPanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  batteryHeightDifference: 0.5
+  perfectScoreRange: 20
+  goodScoreRange: 40
