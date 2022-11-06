@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class GameManager : MonoBehaviour
     public float endTime;
     GameObject Sky;
 
-    private float currTime, skyRotateAngle;
+    GameObject FogTileMap;
+
+    private float currTime, skyRotateAngle, FogTileMapA;
 
     void Awake() {
         if (Instance != null && Instance != this) {
@@ -25,10 +28,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FogTileMap = GameObject.Find("FogTilemap");
         Sky = GameObject.Find("DaynightV1-1.png");
         currTime = 0;
         Application.targetFrameRate = 60;
         skyRotateAngle = (100 / endTime) / 60; //180 - 80 degrees per frame so divide by 60
+        FogTileMapA = 1;
 
     }
 
@@ -37,6 +42,8 @@ public class GameManager : MonoBehaviour
     {
         currTime += Time.deltaTime;
         Sky.transform.RotateAround(Sky.transform.position, Vector3.forward, -skyRotateAngle);
+        FogTileMapA += (140 / endTime) / 60;
+        FogTileMap.GetComponent<Tilemap>().color = new Color(0.4716981f,0.4716981f,0.4716981f, FogTileMapA/255); //gray with increasing opacity
         if (currTime >= endTime) {
             EndLevel();
         }
