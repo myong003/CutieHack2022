@@ -36,6 +36,7 @@ public class BatteryManager : MonoBehaviour
     void Update()
     {
         Debug.Log(batteryPercent);
+
         CheckPanels();
     }
 
