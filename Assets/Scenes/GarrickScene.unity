@@ -537,6 +537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: thunderCloud
       objectReference: {fileID: 0}
+    - target: {fileID: 3143478766650779073, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5259865469832356255, guid: 8211483b44fe145c6af3e7f49c17d2b7, type: 3}
       propertyPath: m_RootOrder
       value: 4
