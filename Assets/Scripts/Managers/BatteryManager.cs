@@ -19,6 +19,8 @@ public class BatteryManager : MonoBehaviour
     private float batteryPercent;
     private float batteryIncrease;
 
+    public float batteryMultiplier = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class BatteryManager : MonoBehaviour
         // Since CheckPanels is called every frame, for endTime seconds, each increase must add up to max battery
         // Divide by 3 for each solar panel
         float totalSamples = GameManager.Instance.endTime * 60;
-        batteryIncrease = Mathf.Abs(150 / totalSamples / solarPanels.Count);
+        batteryIncrease = Mathf.Abs(150 / totalSamples / solarPanels.Count) * batteryMultiplier;
     }
 
     // Update is called once per frame
