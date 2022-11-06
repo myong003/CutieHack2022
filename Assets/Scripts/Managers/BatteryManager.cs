@@ -28,7 +28,7 @@ public class BatteryManager : MonoBehaviour
         // Maximum possible battery = 150% for buffer room
         // Since CheckPanels is called every frame, for endTime seconds, each increase must add up to max battery
         // Divide by 3 for each solar panel
-        float totalSamples = GameManager.Instance.endTime * Application.targetFrameRate;
+        float totalSamples = GameManager.Instance.endTime * 60;
         batteryIncrease = Mathf.Abs(150 / totalSamples / solarPanels.Count);
     }
 
