@@ -6,11 +6,12 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject cloud;
     public GameObject thunderCloud; 
+    public int thunderSpawnChance; 
     public int direction;
 
 
     public void SpawnCloud() {
-        float thunderRandom = Random.Range(0, 5);
+        float thunderRandom = Random.Range(0, thunderSpawnChance);
         Vector3 randomOffset = new Vector3(0, Random.Range(-0.5f, 0.5f), 0);
 
         Vector3 currPos = this.transform.position;
