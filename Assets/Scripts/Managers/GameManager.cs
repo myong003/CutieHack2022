@@ -44,6 +44,13 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel() {
         Debug.Log("Day ended");
-        SceneManager.LoadScene("LevelSelection");
+        if ( batteryManager.batteryPercent < 100 )
+        {
+            SceneManager.LoadScene("GameOverScreen");
+        }
+        else
+        {
+            SceneManager.LoadScene("WinScreen"); 
+        }
     }
 }
