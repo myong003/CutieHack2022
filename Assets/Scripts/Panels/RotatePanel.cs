@@ -9,11 +9,11 @@ public class RotatePanel : MonoBehaviour
     void Update()
     {
         if (gameObject.GetComponent<MovePanel>().isTransitioning || gameObject.GetComponent<MovePanel>().isDisable) return;
-        if(Input.GetKey(KeyCode.A) && (transform.rotation.eulerAngles.z +180f) % 360f - 180f < 45){
-            transform.RotateAround(transform.position, Vector3.forward, rotateSpeed);
+        if(Input.GetKey(KeyCode.A) && (transform.GetChild(1).rotation.eulerAngles.z +180f) % 360f - 180f < 45){
+            transform.GetChild(1).RotateAround(transform.GetChild(1).position, Vector3.forward, rotateSpeed);
         }
-        else if(Input.GetKey(KeyCode.D) && (transform.rotation.eulerAngles.z +180f) % 360f - 180f > -45){
-            transform.RotateAround(transform.position, Vector3.forward, -rotateSpeed);
+        else if(Input.GetKey(KeyCode.D) && (transform.GetChild(1).rotation.eulerAngles.z +180f) % 360f - 180f > -45){
+            transform.GetChild(1).RotateAround(transform.GetChild(1).position, Vector3.forward, -rotateSpeed);
         }   
     }
 }

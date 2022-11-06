@@ -131,6 +131,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 984730956}
     m_Modifications:
+    - target: {fileID: 2363573769722635354, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363573769722635354, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363573769722635354, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363573769722635354, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363573769722635354, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4984460583683446560, guid: cfeb31bccbbdf2446a0aa4bab5369dd1, type: 3}
       propertyPath: botPos
       value: -2
