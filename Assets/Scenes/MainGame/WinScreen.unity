@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 1532790493}
   - component: {fileID: 1532790495}
   - component: {fileID: 1532790494}
+  - component: {fileID: 1532790496}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -751,8 +752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WIN DA BOWEN LETS GOOOOOOO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: de9c840d2d5a9e5479bc9950b36bdd58, type: 2}
+  m_sharedMaterial: {fileID: 606721741764801057, guid: de9c840d2d5a9e5479bc9950b36bdd58, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -826,6 +827,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532790492}
   m_CullTransparentMesh: 1
+--- !u!114 &1532790496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532790492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ee7f5f6fd6f51541b98a346a8ce1d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmpro: {fileID: 1532790494}
+  text: WIN DA BOWEN LETS GOOOOOOO
+  moveSpeed: 2.5
 --- !u!1 &2099611543
 GameObject:
   m_ObjectHideFlags: 0

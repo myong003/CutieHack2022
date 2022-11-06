@@ -138,3 +138,5 @@ MonoBehaviour:
   batteryHeightDifference: 0.42
   perfectScoreRange: 20
   goodScoreRange: 40
+  batteryPercent: 0
+  batteryMultiplier: 1
