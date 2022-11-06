@@ -16,7 +16,7 @@ public class BatteryManager : MonoBehaviour
 
 
     private int currLevel;
-    private float batteryPercent;
+    public float batteryPercent;
     private float batteryIncrease;
 
     public float batteryMultiplier = 1;
