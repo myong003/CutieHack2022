@@ -6,17 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainGame/LevelSelection.unity
+    guid: 2ce6e77e5667c4ef0bf78f82619a10e5
   - enabled: 1
     path: Assets/Scenes/MainGame/WinScreen.unity
     guid: 5bb509d4e87e04338b86fb1857ef9db0
   - enabled: 1
     path: Assets/Scenes/MainGame/GameOverScreen.unity
     guid: c403cb0a0861e4efdac6cd5a6c53bc0f
-  - enabled: 1
-    path: Assets/Scenes/MainGame/LevelSelection.unity
-    guid: 2ce6e77e5667c4ef0bf78f82619a10e5
   - enabled: 1
     path: Assets/Scenes/MainGame/Level1.unity
     guid: fd928a0685dc04466aac32d3b90f3991
@@ -25,7 +22,7 @@ EditorBuildSettings:
     guid: e02baf343053c43b695095893e9f0fc8
   - enabled: 1
     path: Assets/Scenes/MainGame/Level3.unity
-    guid: 3f3cce40a016447e6922160cbad2bae1
+    guid: 2b861ab8d1a0aee46b834f7b5a6e9d72
   - enabled: 1
     path: Assets/Scenes/MainGame/Level4.unity
     guid: e1e4c323f4ba5456fb91a4dae420880b
