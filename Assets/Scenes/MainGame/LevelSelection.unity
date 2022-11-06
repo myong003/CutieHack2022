@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BOWEN GAME
+  m_text: "OPERATION: \nILLUMISSION"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de9c840d2d5a9e5479bc9950b36bdd58, type: 2}
   m_sharedMaterial: {fileID: 606721741764801057, guid: de9c840d2d5a9e5479bc9950b36bdd58, type: 2}
